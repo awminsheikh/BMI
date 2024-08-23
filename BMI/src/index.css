@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-center-col {
+    @apply flex items-center justify-center flex-col;
+  }
+
+  .flex-between-col {
+    @apply flex justify-between items-center flex-col;
+  }
+}
+
+/*  */
+.hoverUnderline {
+  position: relative;
+}
+
+.hoverUnderline::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  content: '';
+  background-color: lightskyblue;
+  height: 1px;
+  transition: 0.5s;
+}
+
+.hoverUnderline:hover::after {
+  width: 100%;
+}
